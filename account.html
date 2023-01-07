@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=di, initial-scale=1.0">
+    <!-- links de la fuente utilizada en 3 tamaños diferentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* variables */
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            /* medidas-texto */
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            /* quitar margen por defecto */
+            margin: 0;
+            /* fuente utilizada en esta pagina */
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login {
+            /* para que abarque toda la pantalla a lo ancho y alto */
+            width: 100%;
+            height: 100vh;
+            /* truco para centrar elementos (tambien funciona con flex-box) */
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            /* para crear un sistema de 3 filas en una columnas (1: title & subtitle, 2: labels & inputs y 3: botton) */
+            display: grid;
+            /* auto: toma el tamaño que desea y 1fr: toma una fraccion del tamaño total del contenido */
+            grid-template-rows: auto 1fr auto;
+            /* ajuste del contenido en pantalla */
+            width: 300px;
+        }
+        .title {
+            /* se asigna tamaño de 18px usando variables */
+            font-size: var(--lg);
+            /* separa el title del subtitle */
+            margin-bottom: 52px;
+            text-align: start;
+        }
+        .subtitle {
+            color: var(--very-light-pink);
+            /* se asigna tamaño de 16px usando variables */
+            font-size: var(--md);
+            /* grosor linea del texto */
+            font-weight: 300;
+            /* evita el cruce del margen de parrafo por defecto */
+            margin-top: 0;
+            /* separa el subtitle de labels e inputs */
+            margin-bottom: 32px;
+            /* centra el subtitle */
+            text-align: center;
+        }
+        .form {
+            /* pone un label+input al lado del otro */
+            display: flex;
+            /* invierte la direccion, para que quede uno debajo del otro */
+            flex-direction: column;
+        }
+        .form div {
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .value {
+            color: var(--very-light-pink);
+            /* asigna color de fondo al input */
+            background-color: var(--text-input-field);
+            /* elimina el borde*/
+            border: none;
+            /* redondea las esquinas del borde */
+            border-radius: 8px;
+            /* altura de los inputs */
+            height: 30px;
+            font-size: var(--md);
+            /* evita que se una al label */
+            padding: 6px;
+            /* genera espacio entre input y botton */
+            margin-bottom: 24px;
+        }
+        .secondary-button {
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            /* cambio de cursor (de flecha a mano) */
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+
+        }
+        .login-button {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px) {
+            .form-container {
+                height: 100%;
+            }
+            .form {
+                height: 100%;
+                justify-content: space-between;
+            }
+            .secondary-button {
+                width: 300px;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+           
+            <h1 class="title">My account</h1>
+            
+            <form action="/" class="form">
+                <div>
+                    <label for="name" class="label">Name</label>
+                    <p class="value">Christyan Basante</p>
+                    <label for="email" class="label">Email address</label>
+                    <p class="value">khonstantin90@gmail.com</p>
+                    <label for="password" class="label">Password</label>
+                    <p class="value">********* </p>
+                </div>
+                <input type="submit" value="Edit" class="secondary-button edit-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
