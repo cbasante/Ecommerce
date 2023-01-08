@@ -20,19 +20,104 @@
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
+        .product-detail {
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+        .product-detail-close {
+            background: var(--white);
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: 2;
+            padding: 12px;
+            border-radius:  50%;
+        }
+        .product-detail-close:hover {
+            cursor: pointer;
+        }
+        .product-detail img:nth-child(1) {
+            width: 16px; 
+            height: 16px;
+            object-fit: cover;   
+        }
+        .product-detail > img:nth-child(2) {
+            width: 100%; 
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;      
+        }
+        .product-info {
+            margin: 24px 24px 0 24px;
+        }
+        .product-info p:nth-child(1) {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .product-info p:nth-child(2) {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .product-info p:nth-child(3) {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            text-align: justify;
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .add-to-cart-botton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .add-to-cart-botton img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            margin-right: 8px;
+            position: relative;
+            top: -2px;
+        }
+        @media (max-width: 640px){
+            .product-detail {
+                width: 100%;
+            }
+        }
     </style>    
 </head>
 <body>
     <aside class="product-detail">
-        <img src="" alt="close">
+        <div class="product-detail-close">
+            <img src="https://freesvg.org/img/1544641784.png" alt="close">
+        </div>
         <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=400" alt="bike">
+       
         <div class="product-info">
             <p>$200,00</p>
             <p>Bike</p>
             <p>"Bike" redirects here. For other uses of Bike, see Bike (disambiguation). For other uses of Bicycle, see Bicycle (disambiguation).
                 For the butterfly genus, see Bicyclus.</p>
-            <button class="primary-button">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-6_ggy5R3PXB2XiTACkbvrLTGFg59YM8fLw&usqp=CAU" alt="add to cart">
+            <button class="primary-button add-to-cart-botton">
+                <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="add to cart">
                 Add to cart
             </button>
         </div>
