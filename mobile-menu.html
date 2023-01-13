@@ -22,39 +22,32 @@
             font-family: 'Quicksand', sans-serif;
         }
         .mobile-menu {
-            padding: 24px;
+        padding: 24px;
         }
         .mobile-menu a {
-            text-decoration: none;
-            color: var(--black);
-            font-weight: bold;
-            /* margin-bottom: 24px;
-            display: inline-block; */
+        text-decoration: none;
+        color: var(--black);
+        font-weight: bold;
+        /* margin-bottom: 24px; */
         }
         .mobile-menu ul {
-            padding: 0;
-            margin: 32px 0 0;
-            list-style: none;
+        padding: 0;
+        margin: 24px 0 0;
+        list-style: none;
         }
         .mobile-menu ul:nth-child(1) {
-            border-bottom: 1px solid var(--very-light-pink);
-        }
-        .mobile-menu ul:nth-child(3) {
-            position: absolute;
-            bottom: 0;
-            margin-bottom: 64px !important;
+        border-bottom: 1px solid var(--very-light-pink);
         }
         .mobile-menu ul li {
-            margin-bottom: 24px;
+        margin-bottom: 24px;
         }
-        .mobile-menu .email {
-            font-size: var(--sm);
-            /* el important omite especificidad, solo usar en casos extremos */
-            font-weight: 300;
+        .email {
+        font-size: var(--sm);
+        font-weight: 300 !important;
         }
-        .mobile-menu .sing-out {
-            font-size: var(--sm);
-            color: var(--hospital-green);
+        .sign-out {
+        font-size: var(--sm);
+        color: var(--hospital-green) !important;
         }
     </style>
 <body>
