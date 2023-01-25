@@ -1,0 +1,105 @@
+@import 'vars';
+
+.Login {
+    /* para que abarque toda la pantalla a lo ancho y alto */
+    width: 100%;
+    height: 100vh;
+    /* truco para centrar elementos (tambien funciona con flex-box) */
+    display: grid;
+    place-items: center;
+}
+.Login-container {
+    /* para crear un sistema de 3 filas en una columnas (1: title & subtitle, 2: labels & inputs y 3: botton) */
+    display: grid;
+    /* auto: toma el tamaño que desea y 1fr: toma una fraccion del tamaño total del contenido */
+    grid-template-rows: auto 1fr auto;
+    /* ajuste del contenido en pantalla */
+    width: 300px;
+}
+.logo {
+    /* tamaño del logo */
+    width: 120px;
+    /* separa el logo del title */
+    margin-bottom: 40px;
+    /* centra el logo dentro del grid */
+    justify-self: center;
+    /* para no mostrar el logo (pantalla desktop) */
+    display: none;
+}
+.form {
+    /* pone un label+input al lado del otro */
+    display: flex;
+    /* invierte la direccion, para que quede uno debajo del otro */
+    flex-direction: column;
+}
+.label {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.input {
+    /* asigna color de fondo al input */
+    background-color: var(--text-input-field);
+    /* elimina el borde*/
+    border: none;
+    /* redondea las esquinas del borde */
+    border-radius: 8px;
+    /* altura de los inputs */
+    height: 30px;
+    font-size: var(--md);
+    /* evita que se una al label */
+    padding: 6px;
+    /* genera espacio entre input y botton */
+    margin-bottom: 12px;
+}
+.input-email {
+    margin-bottom: 22px;
+}
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    /* cambio de cursor (de flecha a mano) */
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+
+}
+.login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+.form a {
+    color: var(--hospital-green);
+    /* quita la linea por defecto debajo del texto del link */
+    font-size: var(--sm);
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 52px;
+}
+.secondary-button {
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    width: 100%;
+    /* cambio de cursor (de flecha a mano) */
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+@media (max-width: 640px) {
+    .logo {
+        display: block;
+    }
+    .secondary-button {
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 24px;
+    }
+}
