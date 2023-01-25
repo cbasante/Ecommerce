@@ -1,0 +1,46 @@
+@import 'vars';
+
+.Menu {
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+    position: absolute;
+    top: 84px;
+    right: 60px;
+    background-color: var(--white);
+}
+.Menu ul {
+    /* remueve las viñetas que trae por defecto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.Menu ul li {
+    text-align: end;
+}
+/* edita 1er y 2do elemento */
+.Menu ul li:nth-child(1),
+.Menu ul li:nth-child(2) {
+    font-weight: bold;
+}
+/* edita el ultimo elemento de la lista */
+.Menu ul li:last-child {
+    /* agrega espacio en la parte superior */
+    padding-top: 20px;
+    /* genera la linea en el borde superior */
+    border-top: 1px solid var(--very-light-pink);
+}
+.Menu ul li:last-child a {
+    color:  var(--hospital-green);
+    font-size: var(--sm);
+}
+.Menu ul li a {
+    color: var(--black);
+    text-decoration: none;
+    margin-bottom: 20px;
+    /* añade caracteristicas de bloque a elementos inline  */
+    display: inline-block;
+}
